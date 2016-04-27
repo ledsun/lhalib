@@ -1,7 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'lhalib_bundler/version'
+
+def read_version
+  File.open('ext/lhalib.c').each_line do |x|
+    m = /LHALIB_VERSION\s+"(.+?)"/.match(x)
+    if m
+      return m[1]
+    end
+  end
+  nil
+end
 
 Gem::Specification.new do |spec|
   spec.name          = "lhalib"
@@ -30,14 +39,3 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.extensions    = ["ext/extconf.rb"]
 end
-
-def read_version
-  File.open('ext/lhalib.c').each_line do |x|
-    m = /LHALIB_VERSION\s+"(.+?)"/.match(x)
-    if m
-      return m[1]
-    end
-  end
-  nil
-end
-
