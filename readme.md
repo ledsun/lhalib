@@ -6,14 +6,14 @@ This project enable Bundler to use [LhaLib](https://github.com/arton/lhalib).
 
 1. Gemfile
 
-```gem 'lhalib', github: 'rmswimkktt/lhalib'```
+    ```gem 'lhalib', github: 'rmswimkktt/lhalib'```
 
-2. bundle
+1. bundle
 
-```bundle install```
+    ```bundle install```
 
-3. require
+1. require
 
-```require 'lhalib'```
+    ```require 'lhalib'```
 
-4. FINISH
+2. FINISH
