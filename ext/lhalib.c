@@ -15,7 +15,7 @@
  * $Id:$
  */
 
-#define LHALIB_VERSION "0.8.1"
+#define LHALIB_VERSION "0.8.2"
 
 #include "lha.h"
 #include "st.h"

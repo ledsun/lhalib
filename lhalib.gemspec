@@ -14,7 +14,7 @@ end
 
 Gem::Specification.new do |spec|
   spec.name          = "lhalib"
-  spec.version       = read_version
+  spec.version       = "0.8.2"
   spec.authors       = ["Daiki Maruta"]
   spec.email         = ["rmswimkktt@gmail.com"]
 
