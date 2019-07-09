@@ -75,7 +75,7 @@ static VALUE s_ex(int argc, VALUE* argv, VALUE self)
   VALUE file;
   proc = Qnil;
   rb_scan_args(argc, argv, "1&", &file, &proc);
-  rb_check_safe_str(file);
+  SafeStringValue(file);
   rb_secure(4);
 
   file_count = 0;
